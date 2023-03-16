@@ -1,12 +1,12 @@
-namespace Ejecicio2{
+namespace Ejercicio2{
 
-  class Concesionario{
+  class Concesionaria{
 
     List<Automovil> listaAutomovil;
     int limiteAutomoviles;
     int noAutosActual;
 
-    public Concesionario(int limiteAutomoviles){
+    public Concesionaria(int limiteAutomoviles){
 
       listaAutomovil = new List<Automovil>();
       this.limiteAutomoviles = limiteAutomoviles;

@@ -1,15 +1,15 @@
-namespace Ejecicio2
+namespace Ejercicio2
 {
   
   class Automovil{
 
-    public string id = "";
-    string marca = "";
-    string modelo = "";
-    int km;
-    double precio;
+    public string? id = "";
+    string? marca = "";
+    string? modelo = "";
+    int? km;
+    double? precio;
 
-    public Automovil(string id, string marca, string modelo, int km, double precio)
+    public Automovil(string? id, string? marca, string? modelo, int? km, double? precio)
     {
       this.id = id;
       this.marca = marca;
