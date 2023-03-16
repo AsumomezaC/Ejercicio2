@@ -19,15 +19,15 @@ namespace Ejercicio2{
           Console.ReadLine();
           return true;
         case "2":
-          Console.WriteLine("Seleccionaste 2");
+          EliminarAutomovil();
           Console.ReadLine();
           return true;
         case "3":
-          Console.WriteLine("Seleccionaste 3");
+          BuscarAutomovil();
           Console.ReadLine();
           return true;
         case "4":
-          Console.WriteLine("Seleccionaste 4");
+          MostrarTodos();
           Console.ReadLine();
           return true;
         case "5":
@@ -60,6 +60,25 @@ namespace Ejercicio2{
       Automovil nuevo = new Automovil(id, marca, modelo, int.Parse(km), double.Parse(precio));
       concesionaria.AgregarAuto(nuevo);
       Console.WriteLine("Automovil agregado correctamente.");
+    }
+
+    public void EliminarAutomovil(){
+      Console.Clear();
+      Console.Write("Ingrese el id del auto a eliminar: ");
+      string? id = Console.ReadLine();
+      concesionaria.EliminarAuto(id);
+    }
+
+    public void BuscarAutomovil(){
+      Console.Clear();
+      Console.Write("Ingrese el id del auto a encontrar: ");
+      string? id = Console.ReadLine();
+      concesionaria.MostrarAuto(id);
+    }
+
+    public void MostrarTodos(){
+      Console.Clear();
+      concesionaria.MostrarAutos();
     }
   }
 }

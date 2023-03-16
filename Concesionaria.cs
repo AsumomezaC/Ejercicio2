@@ -26,7 +26,7 @@ namespace Ejercicio2{
       }
     }
 
-    public void MostrarAuto(string id){
+    public void MostrarAuto(string? id){
 
       if(id != null){
         Automovil? autoEncontrado = listaAutomovil.Find((a)=> a.id==id);
@@ -40,13 +40,16 @@ namespace Ejercicio2{
         Console.WriteLine("El automovil buscado no se encuentra en la concessionaria");
       }
 
-      public void EliminarAuto(string id){
+      public void EliminarAuto(string? id){
 
       if(id != "" && noAutosActual != 0){
         Automovil? autoEcontrado = listaAutomovil.Find((a)=> a.id == id);
         if(autoEcontrado != null){
           listaAutomovil.Remove(autoEcontrado);
           noAutosActual--;
+          Console.WriteLine("Automovil eliminado correctamente");
+        } else {
+          Console.WriteLine("El automovil no existe");
         }
       }
     }
